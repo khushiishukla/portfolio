@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Khushi Shukla – Software Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f2f5fb;--surface:#ffffff;--ink:#14213d;--muted:#51607f;--line:#d9e0ee;--accent:#2f5bea;--accent-ink:#ffffff;--soft:#e4ebff;
+  --display:"Bricolage Grotesque","Segoe UI",Arial,sans-serif;--body:"IBM Plex Sans","Segoe UI",Arial,sans-serif;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1424;--surface:#161e33;--ink:#e8edfa;--muted:#9aa8c7;--line:#27314d;--accent:#7b9bff;--accent-ink:#0e1424;--soft:#1d2848;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1424;--surface:#161e33;--ink:#e8edfa;--muted:#9aa8c7;--line:#27314d;--accent:#7b9bff;--accent-ink:#0e1424;--soft:#1d2848;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+main{max-width:760px;margin:0 auto;padding:56px 22px 72px}
+h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0}
+h1{font-size:clamp(3rem,13vw,5.6rem);font-weight:800;letter-spacing:-.03em}
+h2{font-size:1.55rem;font-weight:700;letter-spacing:-.01em;margin-bottom:18px}
+h3{font-size:1.1rem;font-weight:700}
+section{margin-top:64px}
+.role{font:600 1.15rem/1.4 var(--display);color:var(--accent);margin:14px 0 0}
+.lede{max-width:60ch;color:var(--muted);margin:18px 0 0;font-size:1.05rem}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.btn{display:inline-block;padding:10px 18px;border-radius:999px;border:1.5px solid var(--ink);color:var(--ink);text-decoration:none;font-weight:600;font-size:.95rem}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn:hover{background:var(--soft);color:var(--ink)}.btn.primary:hover{filter:brightness(1.08);color:var(--accent-ink)}
+.theme{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:16px;background:var(--surface);border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:6px 14px;font:500 .85rem var(--body);cursor:pointer}
+
+/* the one memorable thing: a resizable page */
+.lab{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px}
+.lab p{margin:0 0 14px;color:var(--muted);font-size:.95rem}
+.ctl{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.ctl label{font-weight:600;white-space:nowrap}
+.ctl input{flex:1;accent-color:var(--accent)}
+.ctl output{font-variant-numeric:tabular-nums;font-weight:600;min-width:6ch;text-align:right}
+.stage{background:repeating-linear-gradient(45deg,var(--bg),var(--bg) 8px,var(--soft) 8px,var(--soft) 9px);border-radius:10px;padding:14px;overflow:hidden}
+.page{container-type:inline-size;width:var(--w,100%);max-width:100%;margin:0 auto;background:var(--bg);border:1px solid var(--line);border-radius:8px;overflow:hidden;transition:width .12s linear}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border-bottom:1px solid var(--line);font:700 .9rem var(--display)}
+.nav .m{display:none;font-size:1.2rem}
+.nav .l{display:flex;gap:14px;font:500 .8rem var(--body);color:var(--muted)}
+.cards{display:grid;gap:10px;padding:14px;grid-template-columns:1fr}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px;font-size:.78rem;line-height:1.4;color:var(--muted)}
+.card i{display:block;height:44px;border-radius:5px;background:linear-gradient(135deg,var(--accent),var(--soft))}
+.card b{display:block;color:var(--ink);font:700 .88rem var(--display);margin:8px 0 2px}
+@container (max-width:479px){.nav .l{display:none}.nav .m{display:block}}
+@container (min-width:420px){.cards{grid-template-columns:repeat(2,1fr)}}
+@container (min-width:640px){.cards{grid-template-columns:repeat(3,1fr)}}
+.mode{margin-top:12px;font-weight:600;font-size:.9rem}
+
+.job{display:grid;grid-template-columns:132px 1fr;gap:6px 22px;padding:22px 0;border-top:1px solid var(--line)}
+.job:last-child{border-bottom:1px solid var(--line)}
+.when{color:var(--muted);font-size:.9rem;padding-top:3px}
+.job ul{margin:10px 0 0;padding-left:1.1rem}.job li{margin:6px 0}
+.org{color:var(--muted);margin:2px 0 0;font-size:.95rem}
+
+.proj{padding:18px 0;border-top:1px solid var(--line)}
+.proj:last-child{border-bottom:1px solid var(--line)}
+.proj p{margin:6px 0 0;color:var(--muted);max-width:62ch}
+.proj .h{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline}
+
+.skills{display:grid;grid-template-columns:132px 1fr;gap:12px 22px}
+.skills dt{font-weight:600}.skills dd{margin:0;color:var(--muted)}
+.edu{display:grid;grid-template-columns:132px 1fr;gap:4px 22px;padding:14px 0;border-top:1px solid var(--line)}
+.edu p{margin:0}.edu .when{padding:0}
+footer{margin-top:72px;padding-top:26px;border-top:1px solid var(--line);color:var(--muted)}
+footer strong{display:block;font:700 1.6rem var(--display);color:var(--ink);margin-bottom:6px}
+@media (max-width:560px){.job,.skills,.edu{grid-template-columns:1fr}.job .when{order:-1}.skills dd{margin-bottom:6px}}
+.why{display:grid;grid-template-columns:1fr 1fr;gap:22px 28px}
+.why div{border-left:3px solid var(--accent);padding-left:16px}
+.why p{margin:6px 0 0;color:var(--muted)}
+.road details{border-top:1px solid var(--line);padding:14px 0}
+.road details:last-child{border-bottom:1px solid var(--line)}
+.road summary{cursor:pointer;font:700 1.1rem var(--display);list-style:none;display:flex;align-items:center;gap:10px}
+.road summary::-webkit-details-marker{display:none}
+.road summary::before{content:"+";display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--soft);color:var(--accent);font-size:1.1rem;transition:transform .15s}
+.road details[open] summary::before{content:"\2212"}
+.road details p{margin:10px 0 0 36px;color:var(--muted);max-width:60ch}
+@media (max-width:560px){.why{grid-template-columns:1fr}}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 0;padding:0;list-style:none}
+.chips li{background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:5px 14px;font-weight:600;font-size:.88rem}
+@media (prefers-reduced-motion:reduce){.page,.road summary::before{transition:none}}
+</style>
+</head>
+<body>
+<button class="theme" id="theme" type="button" aria-label="Switch between light and dark theme">Theme</button>
+<main>
+  <header>
+    <h1>Khushi Shukla</h1>
+    <p class="role">I turn ideas into fast, reliable websites that people actually enjoy using.</p>
+    <p class="lede">I build responsive websites and Laravel platforms, and I’ve managed the Transwallet payments app from bug report to user rollout. I like work that has to be reliable, fast on a phone and easy to maintain. I’m looking for a backend or full-stack role.</p>
+    <ul class="chips"><li>Ships to live websites</li><li>Learns new tools fast</li><li>Works well with teams</li><li>Builds faster with AI</li></ul>
+    <div class="links">
+      <a class="btn primary" href="mailto:khushi.shukla7665@gmail.com">Email me</a>
+      <a class="btn" href="https://www.linkedin.com/in/khushi-s-410318247/">LinkedIn</a>
+      <a class="btn" href="tel:+918824691499">Call +91 88246 91499</a>
+    </div>
+  </header>
+
+  <section aria-labelledby="why-h">
+    <h2 id="why-h">Why you can hire me</h2>
+    <div class="why">
+      <div><h3>I ship things end to end</h3><p>I managed the Transwallet payments app from the first bug report to rollout for real users.</p></div>
+      <div><h3>I cover front and back</h3><p>Responsive HTML, CSS and JavaScript on the front, PHP and Laravel on the back.</p></div>
+      <div><h3>I work fast, and I check my work</h3><p>AI tools speed up my coding and debugging. I review and test every result before it ships.</p></div>
+      <div><h3>I learn quickly</h3><p>Java intern, then PHP and Laravel developer, then Product Manager of a payments app. I keep picking up what the job needs.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="lab-h">
+    <h2 id="lab-h">Responsive design, live</h2>
+    <div class="lab">
+      <p>Pages I build adapt to every screen. Drag the slider to resize this sample page and watch its menu and layout change.</p>
+      <div class="ctl"><label for="w">Screen width</label><input id="w" type="range" min="280" max="720" value="720" step="1"><output id="out" for="w">720 px</output></div>
+      <div class="stage"><div class="page" id="page">
+        <div class="nav"><span>Sample site</span><span class="m" aria-hidden="true">☰</span><span class="l"><span>Home</span><span>Services</span><span>Contact</span></span></div>
+        <div class="cards"><div class="card"><i></i><b>Loads fast</b>Light pages that open quickly on any phone.</div><div class="card"><i></i><b>Fits every screen</b>One site that works on mobile, tablet and desktop.</div><div class="card"><i></i><b>Easy to manage</b>Clean, reusable code that the team can maintain.</div></div>
+      </div></div>
+      <div class="mode" id="mode" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="ai-h">
+    <h2 id="ai-h">How I use AI to build faster</h2>
+    <div class="lab">
+      <p style="color:var(--ink);font-size:1.02rem;max-width:62ch">I use AI tools to build websites efficiently and quickly. They take over repetitive coding, help me debug faster and give me a starting point for new features, which saves me a lot of development time. I review and test everything they produce, so the final code stays correct, secure and easy to maintain.</p>
+      <p style="margin:0">Tools I work with: ChatGPT, Claude, Cursor and Antigravity.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="exp-h">
+    <h2 id="exp-h">Experience</h2>
+    <article class="job">
+      <div class="when">Feb 2025 – Present</div>
+      <div>
+        <h3>Software Developer</h3><p class="org">Transcorp International Ltd</p>
+        <ul>
+          <li>Develop and maintain responsive web interfaces with HTML, CSS, SCSS and JavaScript.</li>
+          <li>Implement backend functionality with PHP and Laravel using reusable code.</li>
+          <li>Use AI tools (ChatGPT, Claude, Cursor, Antigravity) to speed up website development, debugging and repetitive coding, saving time while keeping code reviewed and maintainable.</li>
+          <li>Collaborate on requirements and new features, troubleshoot technical issues and take part in code reviews to improve performance and cross-browser reliability.</li>
+          <li>Manage the Transwallet mobile app end to end as Product Manager, from issue identification and vendor coordination to bug resolution, testing and user rollout.</li>
+        </ul>
+      </div>
+    </article>
+    <article class="job">
+      <div class="when">Aug 2022 – Nov 2022</div>
+      <div>
+        <h3>Software Developer Intern</h3><p class="org">Dot Squares</p>
+        <ul>
+          <li>Developed Java applications using OOP and worked with senior developers on requirements, features and bug fixes in an agile environment.</li>
+          <li>Gained hands-on experience with Spring, Hibernate, HTML, CSS and JavaScript, and contributed to code reviews and performance improvements.</li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <section aria-labelledby="pro-h">
+    <h2 id="pro-h">Projects</h2>
+    <article class="proj"><div class="h"><h3>Transwallet mobile app</h3></div>
+      <p>A digital payment app for PPI (Prepaid Payment Instrument) cardholders, supporting person-to-person payments and digital transactions through the PPI wallet. I coordinated with the vendor and stakeholders to resolve user issues and keep the experience smooth.</p></article>
+    <article class="proj"><div class="h"><h3>Transcorpint website</h3><a href="https://transcorpint.com/">Visit site</a></div>
+      <p>Corporate website built and maintained with HTML, CSS, JavaScript and PHP, with improved responsive design, UI and functionality.</p></article>
+    <article class="proj"><div class="h"><h3>Transwire website</h3><a href="https://transwire.in/">Visit site</a></div>
+      <p>Responsive website with a currency calculator for foreign exchange rates, built with HTML, CSS, JavaScript and PHP.</p></article>
+    <article class="proj"><div class="h"><h3>Asset Management</h3><a href="https://devassets.transcorpint.com/login">Open login page</a></div>
+      <p>Laravel system for corporate document management, with file and folder organization, multi-user support and role-based access control.</p></article>
+    <article class="proj"><div class="h"><h3>Insurance Lead website</h3><a href="https://insurance.transcorpint.com/customer-login">Open login page</a></div>
+      <p>PHP and Laravel platform with Motor, Non-Motor, Health and Travel inquiry forms, an admin panel for lead tracking, and Zoho CRM integration for lead synchronization.</p></article>
+  </section>
+
+  <section aria-labelledby="grow-h">
+    <h2 id="grow-h">What I’m learning next</h2>
+    <p class="lede" style="margin:0 0 16px">I like adding new skills to my toolkit. Tap a stage to see my plan.</p>
+    <div class="road">
+      <details open><summary>Now: sharpening what I use daily</summary><p>Advanced Laravel (APIs, queues, testing), writing cleaner reusable code, and designing interfaces in Figma before I build them.</p></details>
+      <details><summary>Next: modern full-stack</summary><p>React and Node.js, building and testing REST APIs with Postman, and connecting a Laravel backend to a modern front end.</p></details>
+      <details><summary>Later: building bigger systems</summary><p>Cloud deployment, system design and automation scripts, so I can own larger features from design to launch.</p></details>
+    </div>
+  </section>
+
+  <section aria-labelledby="sk-h">
+    <h2 id="sk-h">Skills</h2>
+    <dl class="skills">
+      <dt>Languages</dt><dd>PHP, JavaScript, Java, HTML, CSS, SCSS</dd>
+      <dt>Frameworks</dt><dd>Laravel, Spring, Hibernate</dd>
+      <dt>Database</dt><dd>MySQL</dd>
+      <dt>AI tools</dt><dd>ChatGPT, Claude, Cursor, Antigravity</dd>
+      <dt>Design</dt><dd>Figma, UI design</dd>
+      <dt>Other</dt><dd>Role-based access control, Zoho CRM integration, code reviews, Git, GitHub, VS Code</dd>
+    </dl>
+  </section>
+
+  <section aria-labelledby="ed-h">
+    <h2 id="ed-h">Education</h2>
+    <div class="edu"><div class="when">2023 – 2025</div><div><h3>Master of Computer Applications</h3><p class="org">JECRC University, Jaipur</p></div></div>
+    <div class="edu" style="border-bottom:1px solid var(--line)"><div class="when">2019 – 2022</div><div><h3>Bachelor of Computer Applications</h3><p class="org">Modi Institute of Management &amp; Technology, Kota</p></div></div>
+  </section>
+
+  <footer>
+    <strong>Let’s build something good together</strong>
+    <p style="margin:0 0 10px;max-width:56ch">I’m looking for a backend or full-stack role where I can ship real features and keep learning. Send me a message and I’ll reply quickly.</p>
+    <a href="mailto:khushi.shukla7665@gmail.com">khushi.shukla7665@gmail.com</a>
+  </footer>
+</main>
+<script>
+(function(){
+  var r=document.getElementById('w'),o=document.getElementById('out'),p=document.getElementById('page'),m=document.getElementById('mode');
+  function u(){var v=+r.value;p.style.setProperty('--w',v+'px');o.textContent=v+' px';
+    m.textContent=v<420?'Phone layout: one column, menu collapses to a button':v<640?'Tablet layout: two columns':'Desktop layout: three columns, full menu';}
+  r.addEventListener('input',u);u();
+  var b=document.getElementById('theme'),root=document.documentElement;
+  b.addEventListener('click',function(){
+    var dark=root.getAttribute('data-theme')?root.getAttribute('data-theme')==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;
+    root.setAttribute('data-theme',dark?'light':'dark');
+  });
+})();
+</script>
+</body>
+</html>
